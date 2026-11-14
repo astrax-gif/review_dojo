@@ -269,7 +269,7 @@ function ResultPanel({ r, onRetry }: { r: Result; onRetry: () => void }) {
         <div className="xpgain"><b>+{r.xp_gain} XP</b>{r.xp_gain === 0 && <span className="dim"> (beat your best on this PR to earn more)</span>}<XpBar p={r.progress} /></div>
       ) : null}
       {r.new_achievements.map((a) => (<div key={a.id} className="ach-pop">{a.icon} Achievement unlocked: <b>{a.name}</b> <span className="dim">{a.desc}</span></div>))}
-      {r.ai_coach && <div className="ai"><b>AI sensei:</b> {r.ai_coach}</div>}
+      {r.ai_coach && <div className="ai"><b>AI Sensei:</b> {r.ai_coach}</div>}
       {r.caught.length > 0 && <h3 className="good">✔ Caught ({r.caught.length})</h3>}
       {r.caught.map((f) => (
         <div key={f.id} className="flaw good">
